@@ -1,0 +1,204 @@
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+/*________________________Анимация ССЫЛОК в КОНТЕНТЕ__________________________*/
+
+.content1 a {
+  color: #fb1fff;
+  transition: all 400ms ease;
+}
+
+.content1 i {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.content1 a:hover {
+  color: #00fffb;
+  text-decoration: underline;
+}
+/*__________________________АНИМАЦИЯ ТЕЗИСОВ__________________________________*/
+/*__________________________ДЕЛИСЬ С ДРУЗЬЯМИ_________________________________*/
+.caption span.simple {
+  text-shadow: 2px 2px 4px #fc00fc, 0 0 1em #fc00fc;
+  font-weight: 600;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+
+}
+
+.caption span.simple:hover {
+  border-radius: 20px;
+  background: #03e9f4;
+  color: #aa00ff;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+  transition: 0.2s ease;
+}
+
+/*_______________________ЛУЧШИЕ ФИЛЬМЫ и РАСШИРЯЕМ ВМЕСТЕ____________________*/
+.caption span.border {
+  text-shadow: 2px 2px 4px #fc00fc, 0 0 1em #fc00fc;
+  font-weight: 600;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.caption span.border a {
+  text-shadow: 2px 2px 4px #fc00fc, 0 0 1em #fc00fc;
+  font-weight: 600;
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.caption span.border a:hover {
+  border-radius: 20px;
+  background: #03e9f4;
+  color: #aa00ff;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+  transition: 0.2s ease;
+}
+
+/*________АНИМАЦИЯ ТЕЗИСОВ (ЛУЧШИЕ ФИЛЬМЫ и РАСШИРЯЕМ ВМЕСТЕ) 360_____________*/
+
+/*Для хождения по кругу рамки*/
+.caption span.border a span {
+  position: absolute;
+  display: block;
+}
+
+.caption span.border a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0%
+  {
+    left: -100%;
+  }
+  50%, 100%
+  {
+    left: 100%;
+  }
+}
+
+.caption span.border a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0%
+  {
+    top: -100%;
+  }
+  50%, 100%
+  {
+    top: 100%;
+  }
+}
+
+.caption span.border a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0%
+  {
+    right: -100%;
+  }
+  50%, 100%
+  {
+    right: 100%;
+  }
+}
+
+.caption span.border a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0%
+  {
+    bottom: -100%;
+  }
+  50%, 100%
+  {
+    bottom: 100%;
+  }
+}
+
+/*____________________________________________________________________________*/
+.content1 {
+  background-image: radial-gradient(#23287a, #1c1f52, #03071f);
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  line-height: 150%;
+  padding: 30px 80px;
+  font-size: 18px;
+}
+
+.content1 h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align:center;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*____________________________________________________________________________*/
+.content2 > .text {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background-image: radial-gradient(#0a1866, #0a1240, #03071f);
+  text-align: center;
+  padding: 50px 80px;
+}

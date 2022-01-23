@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  height: 90px;
+  background-image: linear-gradient(0deg, #2d3b91, #060814);
+}
+
+.inner-width {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.logo {
+  float: left;
+  padding: 20px 0;
+}
+
+.logo h3 {
+  line-height: 50px;
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 3px 3px 6px black, 0 0 1em red;
+}
+
+.navigation-menu {
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navigation-menu a {
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.navigation-menu a:hover {
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.navigation-menu i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.home {
+  color: #fc0a12;
+}
+
+.reg {
+  color: #0abde3;
+}
+
+.login {
+  color: #03fc2c;
+}
+
+.films {
+  color: #03fc2c;
+}
+
+.idea {
+  color: #ffa600;
+}
+
+.mail {
+  color: #00ffdd;
+}
+
+.user {
+  color: #a2ff00;
+}
+
+.menu-toggle-btn {
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+}
+
+@media screen and (max-width:970px) {
+  .menu-toggle-btn {
+    display: block !important;
+    cursor: pointer;
+  }
+
+  .navigation-menu {
+    position: fixed;
+    max-width: 300px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    /*если указать block, то дисплей отображает*/
+    /*указан none потому что при нажатии появляется через скрипт*/
+    display: none;
+    padding: 20px 35px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  /*Треугольничек для ссылок*/
+  .navigation-menu::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navigation-menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /*Для скрипта*/
+  .navigation-menu.active {
+    position: absolute;   /*Чтобы блок ссылок был только вверху в шапке*/
+    z-index: 1; /*Чтобы блок ссылок был поверх паралакса*/
+    display: block;
+  }
+}

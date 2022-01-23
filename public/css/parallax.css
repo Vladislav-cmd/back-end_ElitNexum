@@ -1,0 +1,31 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg-1, .bgimg-2 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("/public/img/earth.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("/public/img/sakura.jpg");
+  min-height: 400px;
+}
+
+/* Отключение параллаксной прокрутки для планшетов и телефонов */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}

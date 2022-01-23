@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+  /*vh - эквивалентно 1% высоты окна браузера.*/
+  /*Например, если высота окна браузера равна 900px, то 1vh будет равен 9px.
+  Аналогично, если ширина окна браузера равна 1600px, то 1vw будет равен 16px.*/
+  min-height: 100vh;
+  background: url('/public/img/earth.jpg') center no-repeat;
+}
+
+.container {
+  padding-top: 10%;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-height: 800px) {
+  .container {
+    padding-top: 60px;
+    text-align: center;
+    color: white;
+  }
+}
+
+.container h2, p {
+  text-shadow: 0 0 5px violet, 0 0 15px red, 0 0 25px red;
+}
+.container p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container h1 {
+  color: black;
+  font-size: 200px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 20px;
+  text-shadow: 0 0 5px red, 0 0 15px red, 0 0 25px red;
+  transition: all 200ms linear;
+}
+
+/*____________________________Вернуться на главную____________________________*/
+.container span.border a {
+  text-decoration: none;
+  color: #fff;
+  padding: 13px 22px 10px 24px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #fc00fc, 0 0 1em #fc00fc;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.2s ease;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.container span.border a:hover {
+  border-radius: 20px;
+  background: #03e9f4;
+  color: #aa00ff;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+}
+
+/*Для хождения по кругу рамки*/
+.container span.border a span {
+  position: absolute;
+  display: block;
+}
+
+.container span.border a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0%
+  {
+    left: -100%;
+  }
+  50%, 100%
+  {
+    left: 100%;
+  }
+}
+
+.container span.border a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0%
+  {
+    top: -100%;
+  }
+  50%, 100%
+  {
+    top: 100%;
+  }
+}
+
+.container span.border a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0%
+  {
+    right: -100%;
+  }
+  50%, 100%
+  {
+    right: 100%;
+  }
+}
+
+.container span.border a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0%
+  {
+    bottom: -100%;
+  }
+  50%, 100%
+  {
+    bottom: 100%;
+  }
+}

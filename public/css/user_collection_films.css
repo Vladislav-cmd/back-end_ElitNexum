@@ -1,0 +1,234 @@
+/*Строка поиска*/
+.search {
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.search form {
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.input_search input[type = "text"] {
+ margin: auto;
+ border: 0;
+ background: none;
+ display: block;
+ border: 2px solid #3490db;
+ padding: 14px 10px;
+ width: 100%;
+ outline: none;
+ color: white;
+ border-radius: 24px;
+ transition: 0.25s;
+}
+
+.input_search button {
+  height: 47px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #3490db;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+
+  border:none;
+  outline: none;
+}
+
+/*Анимация при нажатии на поле*/
+ .input_search input[type = "text"]:focus {
+  border-color: green;
+}
+
+/*Для ошибок*/
+.error {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/*____________________________________________________________________________*/
+
+.menu {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: sans-serif;
+}
+
+.films-list {
+  position: relative;
+  margin: auto;
+  width: 75%;
+  min-height: 450px;
+  padding: 15px 15px 30px 15px;
+  box-shadow: 0 0 50px #000dff;
+  border-radius: 20px;
+
+  background: rgba(25, 25, 25, 0.8);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.one-film {
+  width: 27%;
+  margin-right: 9.5%;
+  height: 430px;
+  background: #eaeaea;
+  border-radius: 5px;
+  margin-top: 15px;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*Чтобы не было отступа справа для третьего элемента*/
+.one-film:nth-child(3n) {margin-right: 0}
+
+.image-film {
+  border-radius: 5px 5px 0 0;
+  background: black;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.image-film img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  transition: all 600ms ease;
+}
+
+/*_________________________Адаптивность___________________________________*/
+
+@media screen and (min-width:1350px) {
+  .films-list {width: 1000px;}
+}
+
+@media screen and (max-width:1320px) {
+  .one-film {height: 370px;}
+
+  .image-film {height: 300px;}
+}
+
+@media screen and (max-width:1150px) {
+  .one-film {height: 330px;}
+
+  .image-film {height: 260px;}
+
+  .one-film a h2 {font-size: 16.5px;}
+}
+
+@media screen and (max-width:1000px) {
+  .one-film {height: 300px;}
+
+  .image-film {height: 220px;}
+}
+
+@media screen and (max-width:850px) {
+  .one-film {height: 250px;}
+
+  .image-film {height: 180px;}
+
+  .one-film a h2 {font-size: 15px;}
+}
+
+@media screen and (max-width:700px) {
+  .one-film {height: 220px;}
+
+  .image-film {height: 155px;}
+
+  .one-film a h2 {font-size: 12px;}
+}
+
+@media screen and (max-width:600px) {
+  .one-film {height: 190px;}
+
+  .image-film {height: 130px;}
+
+  .one-film a h2 {font-size: 11.5px;}
+}
+
+/*____________________________________________________________________________*/
+h1 {
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px black, 0 0 1em green;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.films-list h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+  text-shadow: 3px 3px 6px black, 0 0 1em green;
+  margin-left: 30%;
+  margin-right: 25%;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a img:hover {
+  transform: scale(1.15);
+}
+
+a h2 {
+  word-wrap: break-word;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+a h2:hover {
+  text-decoration: underline;
+  color: #0095a8;
+  text-shadow: 0 0 1px black;
+}
+
+.btn1 {
+  color: black;
+  margin-top: 10px;
+  background: yellow;
+  border: none;
+  padding: 5px 2px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 600ms ease;
+}
+
+.btn1:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.btn2 {
+  color: black;
+  margin-top: 10px;
+  background: red;
+  border: none;
+  padding: 5px 2px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 600ms ease;
+}
+
+.btn2:hover {
+  color: white;
+  text-decoration: underline;
+}
